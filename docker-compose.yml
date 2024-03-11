@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  app:
+    # python3 stickers_export.py HotCherry && zip -r HotCherry.zip HotCherry
+    image: edasriyan/lottie-to-gif
+    environment:
+      - TZ=Asia/Shanghai
+      - WIDTH=128
+      - HEIGHT=128
+      - FPS=6
+      - QUALITY=70
+    volumes:
+      - ./images:/source
+      # - ./images/ChineseDragon:/source
